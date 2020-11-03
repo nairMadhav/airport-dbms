@@ -1,0 +1,40 @@
+title Airport DBMS | Delete Flight
+//  Required meta tags 
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1,shrink-to-fit=no")
+//  Bootstrap CSS 
+link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+nav.navbar.navbar-expand-sm.navbar-light.bg-light
+  a.navbar-brand(href="#") Airport DBMS
+  button.navbar-toggler.d-lg-none(type="button", data-toggle="collapse", data-target="#collapsibleNavId", aria-controls="collapsibleNavId", aria-expanded="false", aria-label="Toggle navigation")
+    span.navbar-toggler-icon
+  .collapse.navbar-collapse#collapsibleNavId
+    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+      li.nav-item.active
+        a.nav-link(href="#")
+          | Home 
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href="/home/:username/airlines-list") Airlines
+      li.nav-item
+        a.nav-link(href="/admin/list-accounts") Customers
+      li.nav-item
+        a.nav-link(href="/:username/transactions") Transactions
+      li.nav-item
+        a.nav-link(href="/flights") Flights
+      li.nav-item
+        a.nav-link(href="book") Book A Flight
+.container(style="padding-top: 10%;")
+.input-group.mb-3
+  .input-group-prepend
+    label.input-group-text(for="inputGroupSelect01") Delete by:
+  select.custom-select#inputGroupSelect01
+    option(selected) Choose...
+    option(value="airline_code") Airline Code
+    option(value="flight_number") Flight Number
+.form-group
+      // Data
+      label.col-sm-1-12.col-form-label(for="inputName")
+      .col-sm-1-12
+        input.form-control#password(type="text", name="flight_number", placeholder="Enter value...")
+button.btn.btn-danger#login(type="submit") Delete Flight
